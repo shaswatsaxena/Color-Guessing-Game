@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>   Guess the Color  </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="section hero is-primary is-bold">
+        <div class="container is-fluid">
+            <h1 class="title has-text-centered  is-size-1-fullhd"> The Great Guessing Game </h1>
+            <h2 id="displayColor" class="title has-text-centered  is-size-1-fullhd is-uppercase"></h2>
+            <p class="has-text-centered is-capitalized">
+    </header>
+    <section class="section  has-background-white is-paddingless">
+        <div class="container is-fluid">
+            <nav class="navbar level is-mobile">
+                <div class="level-left level-item has-text-centered">
+                    <div>
+                        <a id="reset" class="button is-info is-outlined">NEW COLORS</a>
+                    </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div id="result"></div>
+              </div>
+              <div class="level-item level-right has-text-centered">
+                <div>
+                  <a id="easy" class="button is-primary is-outlined">EASY</a>
+                  <a id="hard" class="button is-primary is-outlined">HARD</a>
+                </div>
+              </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section  is-medium has-background-black">
+        <div class="container">
+
+            <div id="easyoptions" class="columns is-mobile">
+              <div class="column">
+                <div id="option1" class="tile"></div>
+              </div>
+              <div class="column">
+                <div id="option2" class="tile"></div>
+              </div>
+              <div class="column">
+                <div id="option3" class="tile"></div>
+              </div>
+            </div>
+
+            <div id="hardoptions" class="columns is-mobile">
+              <div class="column">
+                <div id="option4" class="tile"></div>
+              </div>
+              <div class="column">
+                <div id="option5" class="tile"></div>
+              </div>
+              <div class="column">
+                <div id="option6" class="tile"></div>
+              </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
