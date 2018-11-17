@@ -1,7 +1,6 @@
 var i,r,g,b,color,ans,difficulty;
 var boxes =[];
 var colors =[];
-var tries ;
 var header = document.querySelector("header");
 var result = document.querySelector("#result");
 var color = document.querySelector("#displayColor");
@@ -37,7 +36,6 @@ function setup() {
         ans =  Math.floor(Math.random() * 6);
     }
     color.innerHTML = colors[ans];
-    tries = 0 ;
     run();
 }
 
@@ -53,11 +51,7 @@ function run(){
 }
 
 function correct() {
-    if (difficulty == easy) {
-        result.innerHTML = `Correct Answer | Your Score is ${500-(tries*250)}`;
-    } else {
-        result.innerHTML = `Correct Answer | Your Score is ${1000-(tries*200)}`;
-    }
+    result.innerHTML = "Correct Answer";
     header.classList.remove("is-primary" ,"is-bold");
     header.style.backgroundColor = colors[ans];
     for (i=0 ; i<boxes.length ; i++){
@@ -69,7 +63,6 @@ function correct() {
 function wrong(e) {
     result.innerHTML = "Try Again";
     e.classList.add("is-invisible");
-    tries++;
 }
 
 difficulty = easy;
